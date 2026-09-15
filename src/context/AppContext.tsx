@@ -190,26 +190,26 @@ export function AppProvider({ children }: { children: ReactNode }) {
       ),
     );
 
-    const isFeaturedRahulFlow =
-      application.applicantId === 'u-rahul' && application.problemId === 'p-research-connect';
+    const isFeaturedPurvikaFlow =
+      application.applicantId === 'u-purvika' && application.problemId === 'p-research-connect';
 
     setCommitments((prev) => [
       ...prev,
       {
         id: nextId('c'),
         projectId: finalProject.id,
-        title: isFeaturedRahulFlow ? 'Build authentication API' : `Get started on ${problem?.title ?? 'the project'}`,
-        description: isFeaturedRahulFlow
+        title: isFeaturedPurvikaFlow ? 'Build authentication API' : `Get started on ${problem?.title ?? 'the project'}`,
+        description: isFeaturedPurvikaFlow
           ? 'Implement authentication endpoints and session handling for the platform.'
           : application.contribution,
         ownerId: application.applicantId,
-        dueDate: isFeaturedRahulFlow ? '2026-09-18' : '2026-09-25',
-        status: isFeaturedRahulFlow ? 'In progress' : 'Not started',
-        expectedEffort: isFeaturedRahulFlow ? '5 hours' : '4 hours',
+        dueDate: isFeaturedPurvikaFlow ? '2026-09-18' : '2026-09-25',
+        status: isFeaturedPurvikaFlow ? 'In progress' : 'Not started',
+        expectedEffort: isFeaturedPurvikaFlow ? '5 hours' : '4 hours',
       },
     ]);
 
-    if (isFeaturedRahulFlow) {
+    if (isFeaturedPurvikaFlow) {
       setProjects((prev) =>
         prev.map((p) =>
           p.id === finalProject.id

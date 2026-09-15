@@ -7,7 +7,7 @@ import type {
   User,
 } from '../types';
 
-export const CURRENT_USER_ID = 'u-rahul';
+export const CURRENT_USER_ID = 'u-purvika';
 
 export const users: User[] = [
   {
@@ -19,13 +19,13 @@ export const users: User[] = [
     colorClass: 'bg-violet-100 text-violet-700',
   },
   {
-    id: 'u-rahul',
-    name: 'Rahul Mehta',
+    id: 'u-purvika',
+    name: 'Purvika Gore',
     headline: 'Full-stack developer',
     skills: ['React', 'Node.js', 'Python'],
     availability: '5 hrs/week',
     projectsCompleted: 3,
-    initials: 'RM',
+    initials: 'PG',
     colorClass: 'bg-blue-100 text-blue-700',
   },
   {
@@ -296,16 +296,16 @@ export const problems: Problem[] = [
 
 export const applications: Application[] = [
   {
-    id: 'app-rahul-research-connect',
+    id: 'app-purvika-research-connect',
     problemId: 'p-research-connect',
-    applicantId: 'u-rahul',
+    applicantId: 'u-purvika',
     motivation:
       "I've worked on education products before and would like to contribute to the backend and API design.",
     contribution:
       'I can build and own the backend API, authentication, and data model for the platform.',
     skills: ['React', 'Node.js', 'Python'],
     availability: '5–7 hrs/week',
-    relevantWorkUrl: 'github.com/rahulmehta/student-scheduler',
+    relevantWorkUrl: 'github.com/purvikagore/student-scheduler',
     status: 'pending',
     submittedAt: '2026-09-08',
   },
@@ -340,19 +340,19 @@ export const applications: Application[] = [
 
 export const chatThreads: ChatThread[] = [
   {
-    id: 'chat-rahul-research-connect',
-    applicationId: 'app-rahul-research-connect',
+    id: 'chat-purvika-research-connect',
+    applicationId: 'app-purvika-research-connect',
     problemId: 'p-research-connect',
     messages: [
       {
         id: 'm1',
         senderId: 'u-ananya',
-        text: 'Hey Rahul, thanks for applying. Have you worked with REST APIs before?',
+        text: 'Hey Purvika, thanks for applying. Have you worked with REST APIs before?',
         timestamp: '2026-09-09T10:02:00',
       },
       {
         id: 'm2',
-        senderId: 'u-rahul',
+        senderId: 'u-purvika',
         text: 'Yes. I built the backend for a student scheduling platform last semester.',
         timestamp: '2026-09-09T10:05:00',
       },
@@ -364,7 +364,7 @@ export const chatThreads: ChatThread[] = [
       },
       {
         id: 'm4',
-        senderId: 'u-rahul',
+        senderId: 'u-purvika',
         text: 'Around 5 hours, mostly evenings.',
         timestamp: '2026-09-09T10:08:00',
       },
