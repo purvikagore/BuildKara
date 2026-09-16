@@ -111,31 +111,31 @@ export const getUser = (id: string): User =>
 
 export const problems: Problem[] = [
   {
-    id: 'p-research-connect',
-    title: 'Help students find research opportunities',
+    id: 'p-llm-buddy',
+    title: 'AI study assistant for homework and assignments',
     summary:
-      'Undergraduate students struggle to discover professors who are open to student research collaborations.',
+      'Students struggle to get step-by-step guidance on complex homework problems without just getting direct answers.',
     description:
-      'Undergraduate students often struggle to discover research opportunities outside their immediate university network. Professors rarely advertise openings publicly, and most opportunities are found through word of mouth or cold emails that go unanswered.',
-    whoExperiences: 'Undergraduate students looking for research experience.',
+      'Students often get stuck on complex assignments and homework problems. Generic AI tools either provide direct answers without explaining concepts or produce hallucinatory solutions. LLMBuddy helps students understand principles step-by-step.',
+    whoExperiences: 'Students working on complex homework and assignments.',
     currentSolutions: [
-      'LinkedIn',
-      'Emailing professors',
-      'Personal connections',
-      'University mailing lists',
+      'ChatGPT',
+      'Chegg',
+      'Tutoring centers',
+      'Office hours',
     ],
     evidenceCount: '15 students interviewed',
     evidenceQuote:
-      "I don't know which professors are actually open to working with undergrads.",
-    category: 'Education',
+      "I don't want the answer copied for me, I want to understand how to solve it step-by-step.",
+    category: 'AI',
     stage: 'Building',
     ownerId: 'u-ananya',
-    skillsNeeded: ['Frontend', 'UX', 'Backend'],
+    skillsNeeded: ['Frontend', 'UX', 'Backend', 'LLMs'],
     commitment: '5 hrs/week',
     duration: '6 weeks',
     teamSize: 4,
-    teamMemberIds: ['u-ananya', 'u-priya'],
-    projectId: 'proj-research-connect',
+    teamMemberIds: ['u-ananya', 'u-priya', 'u-purvika'],
+    projectId: 'proj-llm-buddy',
     createdAt: '2026-08-05',
   },
   {
@@ -318,11 +318,11 @@ export const problems: Problem[] = [
 
 export const applications: Application[] = [
   {
-    id: 'app-purvika-research-connect',
-    problemId: 'p-research-connect',
+    id: 'app-purvika-llm-buddy',
+    problemId: 'p-llm-buddy',
     applicantId: 'u-purvika',
     motivation:
-      "I've worked on education products before and would like to contribute to the backend and API design.",
+      "I've worked on AI & education products before and would like to contribute to the LLM backend and API design.",
     contribution:
       'I can build and own the backend API, authentication, and data model for the platform.',
     skills: ['React', 'Node.js', 'Python'],
@@ -332,8 +332,8 @@ export const applications: Application[] = [
     submittedAt: '2026-09-08',
   },
   {
-    id: 'app-meera-research-connect',
-    problemId: 'p-research-connect',
+    id: 'app-meera-llm-buddy',
+    problemId: 'p-llm-buddy',
     applicantId: 'u-meera',
     motivation:
       'I care a lot about accessibility in education tools and want to help make this easy to navigate for first-time users.',
@@ -346,13 +346,13 @@ export const applications: Application[] = [
     submittedAt: '2026-09-09',
   },
   {
-    id: 'app-daniel-research-connect',
-    problemId: 'p-research-connect',
+    id: 'app-daniel-llm-buddy',
+    problemId: 'p-llm-buddy',
     applicantId: 'u-daniel',
     motivation:
       "I've built backend systems for two student-facing products and enjoy working close to real user problems.",
     contribution:
-      'I can help design the database schema and build out the matching logic between students and professors.',
+      'I can help design the database schema and build out the matching logic between students and tutors.',
     skills: ['Node.js', 'Python', 'Databases'],
     availability: '8–10 hrs/week',
     status: 'pending',
@@ -401,9 +401,9 @@ export const chatThreads: ChatThread[] = [
     ],
   },
   {
-    id: 'chat-purvika-research-connect',
-    applicationId: 'app-purvika-research-connect',
-    problemId: 'p-research-connect',
+    id: 'chat-purvika-llm-buddy',
+    applicationId: 'app-purvika-llm-buddy',
+    problemId: 'p-llm-buddy',
     messages: [
       {
         id: 'm1',
@@ -432,9 +432,9 @@ export const chatThreads: ChatThread[] = [
     ],
   },
   {
-    id: 'chat-meera-research-connect',
-    applicationId: 'app-meera-research-connect',
-    problemId: 'p-research-connect',
+    id: 'chat-meera-llm-buddy',
+    applicationId: 'app-meera-llm-buddy',
+    problemId: 'p-llm-buddy',
     messages: [
       {
         id: 'm1',
@@ -445,20 +445,20 @@ export const chatThreads: ChatThread[] = [
       {
         id: 'm2',
         senderId: 'u-meera',
-        text: "I switched universities and felt completely lost trying to find research opportunities, so this really resonates.",
+        text: "I struggle with complex assignment problems myself, so an AI homework assistant really resonates.",
         timestamp: '2026-09-09T14:12:00',
       },
     ],
   },
   {
-    id: 'chat-daniel-research-connect',
-    applicationId: 'app-daniel-research-connect',
-    problemId: 'p-research-connect',
+    id: 'chat-daniel-llm-buddy',
+    applicationId: 'app-daniel-llm-buddy',
+    problemId: 'p-llm-buddy',
     messages: [
       {
         id: 'm1',
         senderId: 'u-ananya',
-        text: 'Hi Daniel, thanks for reaching out. Could you share more about the scheduler backend you mentioned?',
+        text: 'Hi Daniel, thanks for reaching out. Could you share more about the backend you mentioned?',
         timestamp: '2026-09-10T09:15:00',
       },
     ],
@@ -467,11 +467,11 @@ export const chatThreads: ChatThread[] = [
 
 export const projects: Project[] = [
   {
-    id: 'proj-research-connect',
-    problemId: 'p-research-connect',
-    name: 'ResearchConnect',
+    id: 'proj-llm-buddy',
+    problemId: 'p-llm-buddy',
+    name: 'LLMBuddy',
     status: 'In progress',
-    goal: 'Launch an MVP that helps students discover research opportunities by October 30.',
+    goal: 'Launch an MVP that helps students with homework and assignments by October 30.',
     targetDate: '2026-10-30',
     milestones: [
       { id: 'ms-1', title: 'User research', status: 'complete', dueDate: '2026-09-05' },
@@ -483,19 +483,26 @@ export const projects: Project[] = [
     team: [
       { userId: 'u-ananya', roleLabel: 'Research / Product' },
       { userId: 'u-priya', roleLabel: 'Design' },
+      { userId: 'u-purvika', roleLabel: 'Full-stack Developer' },
     ],
     teamChat: [
       {
         id: 'tm1',
         senderId: 'u-ananya',
-        text: "Kicking off the week — let's get the onboarding flow and interviews wrapped up.",
+        text: "Kicking off the week — let's get the onboarding flow and prompt templates wrapped up.",
         timestamp: '2026-09-11T09:00:00',
       },
       {
         id: 'tm2',
         senderId: 'u-priya',
-        text: "On it. I'll share the onboarding wireframes by Friday.",
+        text: "On it. I'll share the UI wireframes by Friday.",
         timestamp: '2026-09-11T09:04:00',
+      },
+      {
+        id: 'tm3',
+        senderId: 'u-purvika',
+        text: 'Working on the backend API authentication endpoints today.',
+        timestamp: '2026-09-11T09:10:00',
       },
     ],
   },
@@ -503,10 +510,46 @@ export const projects: Project[] = [
 
 export const commitments: Commitment[] = [
   {
+    id: 'c-purvika-auth-api',
+    projectId: 'proj-llm-buddy',
+    title: 'Build authentication API & JWT session flow',
+    description: 'Implement secure login, token validation, and session endpoints for student profiles.',
+    ownerId: 'u-purvika',
+    dueDate: '2026-09-18',
+    status: 'In progress',
+    expectedEffort: '5 hours',
+  },
+  {
+    id: 'c-purvika-db-schema',
+    projectId: 'proj-llm-buddy',
+    title: 'Design database schema & migrations',
+    description: 'Model relational schemas for student profiles, course topics, and assignment history.',
+    ownerId: 'u-purvika',
+    dueDate: '2026-09-14',
+    status: 'Complete',
+    expectedEffort: '4 hours',
+    evidence: {
+      type: 'GitHub PR',
+      url: 'github.com/purvikagore/student-scheduler/pull/3',
+      description: 'Submitted pull request with Knex migration scripts and database ER diagram.',
+      completedAt: '2026-09-14',
+    },
+  },
+  {
+    id: 'c-purvika-swagger-docs',
+    projectId: 'proj-llm-buddy',
+    title: 'API documentation & OpenAPI specs',
+    description: 'Write Swagger specs for all backend endpoints to share with frontend team.',
+    ownerId: 'u-purvika',
+    dueDate: '2026-09-25',
+    status: 'Not started',
+    expectedEffort: '3 hours',
+  },
+  {
     id: 'c-onboarding-flow',
-    projectId: 'proj-research-connect',
+    projectId: 'proj-llm-buddy',
     title: 'Create user onboarding flow',
-    description: 'Design the first-time experience for students signing up and setting research interests.',
+    description: 'Design the first-time experience for students signing up and choosing subject areas.',
     ownerId: 'u-priya',
     dueDate: '2026-09-20',
     status: 'Not started',
@@ -514,9 +557,9 @@ export const commitments: Commitment[] = [
   },
   {
     id: 'c-student-interviews',
-    projectId: 'proj-research-connect',
+    projectId: 'proj-llm-buddy',
     title: 'Conduct 10 student interviews',
-    description: 'Validate the professor-matching concept with undergraduate students across departments.',
+    description: 'Validate the homework step-by-step guidance concept with undergraduate students.',
     ownerId: 'u-ananya',
     dueDate: '2026-09-17',
     status: 'Complete',

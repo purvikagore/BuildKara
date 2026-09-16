@@ -191,7 +191,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
     );
 
     const isFeaturedPurvikaFlow =
-      application.applicantId === 'u-purvika' && application.problemId === 'p-research-connect';
+      application.applicantId === 'u-purvika' && application.problemId === 'p-llm-buddy';
 
     setCommitments((prev) => [
       ...prev,
