@@ -20,6 +20,8 @@ export function MyProjectsPage() {
     (a) => a.applicantId === currentUserId && a.status === 'pending',
   );
 
+  const myPostedProblems = problems.filter((p) => p.ownerId === currentUserId);
+
   return (
     <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
       <h1 className="text-2xl font-semibold tracking-tight text-slate-900">My Projects</h1>
@@ -58,6 +60,40 @@ export function MyProjectsPage() {
               </Link>
             );
           })}
+        </div>
+      )}
+
+      {myPostedProblems.length > 0 && (
+        <div className="mt-10">
+          <h2 className="text-lg font-semibold tracking-tight text-slate-900">Problems You've Posted</h2>
+          <p className="mt-1 text-sm text-slate-500">Problems you submitted for collaboration.</p>
+          <div className="mt-4 grid gap-4 sm:grid-cols-2">
+            {myPostedProblems.map((prob) => {
+              const probApps = applications.filter((a) => a.problemId === prob.id && a.status === 'pending');
+              return (
+                <Link
+                  key={prob.id}
+                  to={`/problems/${prob.id}`}
+                  className="rounded-2xl border border-slate-200 bg-white p-5 transition-shadow hover:shadow-md"
+                >
+                  <div className="flex items-center justify-between">
+                    <Badge variant="accent">{prob.stage}</Badge>
+                    {probApps.length > 0 && (
+                      <Badge variant="warning">{probApps.length} pending applicant{probApps.length > 1 ? 's' : ''}</Badge>
+                    )}
+                  </div>
+                  <h3 className="mt-2 text-base font-semibold text-slate-900">{prob.title}</h3>
+                  <p className="mt-1 line-clamp-2 text-sm text-slate-500">{prob.summary}</p>
+                  <div className="mt-4 flex items-center justify-between text-xs text-slate-500">
+                    <span>{prob.category}</span>
+                    {probApps.length > 0 && (
+                      <span className="font-medium text-indigo-600">Review applicants &rarr;</span>
+                    )}
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
         </div>
       )}
 

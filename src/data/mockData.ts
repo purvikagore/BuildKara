@@ -292,6 +292,28 @@ export const problems: Problem[] = [
     teamMemberIds: ['u-tom', 'u-grace'],
     createdAt: '2026-08-10',
   },
+  {
+    id: 'p-dev-portfolio-builder',
+    title: 'Minimalist dev portfolio builder for student projects',
+    summary:
+      'Computer science students spend too much time building portfolio sites from scratch instead of showcasing their actual projects.',
+    description:
+      'CS students often spend days setting up portfolio site frameworks and CSS rather than highlighting their code, architecture, and live demos. Existing builders like Wix or Webflow feel bloated and non-technical, while GitHub Pages requires manual HTML template tweaking.',
+    whoExperiences: 'Computer science students and bootcamp graduates looking for tech roles.',
+    currentSolutions: ['GitHub Pages', 'Wix / Webflow', 'Custom React sites from scratch'],
+    evidenceCount: '14 CS students interviewed',
+    evidenceQuote:
+      "I spent a week wrestling with CSS layout when all recruiters wanted to see was my API project.",
+    category: 'Developer Tools',
+    stage: 'Problem validated',
+    ownerId: 'u-purvika',
+    skillsNeeded: ['React', 'Tailwind', 'Node.js'],
+    commitment: '5 hrs/week',
+    duration: '6 weeks',
+    teamSize: 3,
+    teamMemberIds: ['u-purvika'],
+    createdAt: '2026-09-11',
+  },
 ];
 
 export const applications: Application[] = [
@@ -336,9 +358,48 @@ export const applications: Application[] = [
     status: 'pending',
     submittedAt: '2026-09-10',
   },
+  {
+    id: 'app-ananya-portfolio-builder',
+    problemId: 'p-dev-portfolio-builder',
+    applicantId: 'u-ananya',
+    motivation:
+      "I love UI tools for developers and would like to help design and test the template system.",
+    contribution:
+      'I can design the modular layout components in Figma and conduct user feedback sessions with CS students.',
+    skills: ['UX', 'Research', 'Figma'],
+    availability: '5 hrs/week',
+    relevantWorkUrl: 'figma.com/@ananyasharma/dev-templates',
+    status: 'pending',
+    submittedAt: '2026-09-14',
+  },
 ];
 
 export const chatThreads: ChatThread[] = [
+  {
+    id: 'chat-ananya-portfolio-builder',
+    applicationId: 'app-ananya-portfolio-builder',
+    problemId: 'p-dev-portfolio-builder',
+    messages: [
+      {
+        id: 'm101',
+        senderId: 'u-ananya',
+        text: 'Hi Purvika! I saw your problem post for the developer portfolio builder. I would love to help with the UX and component layouts!',
+        timestamp: '2026-09-14T14:15:00',
+      },
+      {
+        id: 'm102',
+        senderId: 'u-purvika',
+        text: 'Hey Ananya! That sounds great. Have you designed UI templates before?',
+        timestamp: '2026-09-14T14:20:00',
+      },
+      {
+        id: 'm103',
+        senderId: 'u-ananya',
+        text: 'Yes! I created a set of open-source Figma components for student projects.',
+        timestamp: '2026-09-14T14:22:00',
+      },
+    ],
+  },
   {
     id: 'chat-purvika-research-connect',
     applicationId: 'app-purvika-research-connect',
